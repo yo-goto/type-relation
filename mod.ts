@@ -1,9 +1,4 @@
 /**
- * This module contains type utilities for checking type relationships.
- * @module
- */
-
-/**
  * Check if the first type is assignable to the second type (Fst <: Snd)
  */
 export type IsAssignable<Fst, Snd> = [Fst] extends [Snd]
