@@ -2,11 +2,11 @@
 
 This is simple utilities to check the type relations between two types in a TypeScript project.
 
-- Check subtype (assignment) compatibility: `T1 <: T2`
-- Check two types are identical (or equal): `T1 = T2`
-- Check two types are equivalent: `T1 ≡ T2`
-- Check two types are unrelated: `T1 ⊥ T2`
-- Check two types are compatible (check above cases at once)
+- Check subtype (assignment) compatibility: T1 <: T2: `T1 <: T2`
+- Check if two types are identical (or equal): T1 = T2: `T1 = T2`
+- Check if two types are equivalent: T1 ≡ T2: `T1 ≡ T2`
+- Check if two types are unrelated: T1 ⊥ T2: `T1 ⊥ T2`
+- Check if two types are compatible (checks the above cases at once)
 
 ## Installation
 
@@ -16,7 +16,7 @@ deno add @yo-goto/type-relation
 ```
 
 ```sh
-# npm...
+# npm
 npx jsr add @yo-goto/type-relation
 ```
 
