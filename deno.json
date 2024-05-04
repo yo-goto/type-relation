@@ -1,7 +1,7 @@
 {
   "name": "@yo-goto/type-relation",
   "version": "1.0.0",
-  "exports": "./mod.ts",
+  "exports": "./src/mod.ts",
   "fmt": {
     "useTabs": false,
     "lineWidth": 80,
