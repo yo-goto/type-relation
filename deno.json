@@ -1,10 +1,5 @@
 {
   "name": "@yo-goto/type-relation",
   "version": "1.0.0",
-  "exports": "./src/mod.ts",
-  "fmt": {
-    "useTabs": false,
-    "lineWidth": 80,
-    "proseWrap": "preserve"
-  }
+  "exports": "./mod.ts"
 }
