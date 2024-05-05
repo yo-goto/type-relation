@@ -8,12 +8,12 @@ export type IsAssignable<Fst, Snd> = [Fst] extends [Snd]
 /**
  * Check if the first type is a subtype of the second type (Fst <: Snd)
  */
-export type IsSubtype<Fst, Snd> = IsAssignable<Fst, Snd> extends true ? true : false;
+export type IsSubtype<Fst, Snd> = IsAssignable<Fst, Snd>;
 
 /**
  * Check if the first type is a supertype of the second type (Fst :> Snd)
  */
-export type IsSupertype<Fst, Snd> = IsAssignable<Snd, Fst> extends true ? true : false;
+export type IsSupertype<Fst, Snd> = IsAssignable<Snd, Fst>;
 
 
 /**
@@ -34,7 +34,7 @@ type Compat<Fst, Snd> = IsEquivalent<Fst, Snd> extends true
     ? "Subtype"      // Fst <: Snd
       : IsAssignable<Snd, Fst> extends true
       ? "Supertype"  // Fst :> Snd
-  : "Unrelated";     // Incomparable
+  : "Unrelated";     // Fst ⊥ Snd
 
 /**
  * Check if two types are unrelated (Fst ⊥ Snd)
@@ -59,6 +59,12 @@ export type Equals<Fst, Snd> = IsIdentical<Fst, Snd>;
 
 /**
  * Check the relationship between two types
+ *
+ * - Identical: Fst = Snd
+ * - Equivalent: Fst ≡ Snd (Fst <: Snd and Fst :> Snd)
+ * - Subtype: Fst <: Snd
+ * - Supertype: Fst :> Snd
+ * - Unrelated: Fst ⊥ Snd
  */
 export type Relation<Fst, Snd = Fst> =
   IsIdentical<Fst, Snd> extends true
