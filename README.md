@@ -1,6 +1,6 @@
 # Type Relation Checker
 
-This is simple utilities to check the type relations between two types in a TypeScript project.
+This is a simple utility for checking the type relationships between two types in a TypeScript project.
 
 - Check subtype (assignment) compatibility: `T1 <: T2`
 - Check if two types are identical (or equal): `T1 = T2`
